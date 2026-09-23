@@ -8,6 +8,7 @@
     <meta name="description" content="Portfolio of Malshaan Kodithuwakku, a software engineering student with experience in full-stack development, mobile applications, data analysis, and utility-sector systems." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23173c30'/%3E%3Cpath d='M13 14h9l10 17 10-17h9v36h-9V29L32 45 22 29v21h-9z' fill='%23f7f3e8'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -79,67 +80,96 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <h2 id="projects-title">Selected projects</h2>
-          <p>Projects I would be comfortable discussing in detail during an interview.</p>
+          <p>Swipe or use the arrows to move through the projects.</p>
         </div>
 
-        <div class="project-list">
-          <article class="project-item featured-project">
-            <div class="project-number">01</div>
-            <div class="project-content">
-              <div class="project-title-row">
+        <div class="project-carousel" data-project-carousel>
+          <div class="project-controls">
+            <button type="button" data-project-previous aria-label="Show previous project">←</button>
+            <output aria-live="polite" data-project-counter>1 / 5</output>
+            <button type="button" data-project-next aria-label="Show next project">→</button>
+          </div>
+
+          <div class="project-track" data-project-track tabindex="0" aria-label="Selected projects carousel">
+            <article class="project-card" aria-label="Project 1 of 5: theSchedule">
+              <div class="project-media">
+                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/theSchedule" alt="GitHub preview for theSchedule project" />
+              </div>
+              <div class="project-card-content">
+                <p class="project-type">Full-stack web application</p>
                 <h3>theSchedule</h3>
-                <span>Full-stack web application</span>
+                <p>A workforce scheduling system covering availability, schedule creation, publishing, shift changes, reporting, backups, and email workflows.</p>
+                <p class="technology">Next.js · TypeScript · Prisma · PostgreSQL</p>
+                <p class="project-proof">69 passing tests · live UAT</p>
+                <div class="project-links">
+                  <a href="https://mafm-schedule.vercel.app" target="_blank" rel="noreferrer">Live UAT ↗</a>
+                  <a href="https://github.com/mkodithuwakku/theSchedule" target="_blank" rel="noreferrer">Source ↗</a>
+                </div>
               </div>
-              <p>A workforce scheduling system for a retail team, covering employee availability, schedule creation, publishing, shift changes, reporting, backups, and email workflows.</p>
-              <p class="technology">Next.js · TypeScript · Prisma · Neon PostgreSQL · Auth.js · Resend</p>
-              <p class="project-proof">69 passing tests · controlled live user acceptance testing</p>
-              <div class="project-links">
-                <a href="https://mafm-schedule.vercel.app" target="_blank" rel="noreferrer">Live UAT ↗</a>
-                <a href="https://github.com/mkodithuwakku/theSchedule" target="_blank" rel="noreferrer">Source ↗</a>
+            </article>
+
+            <article class="project-card" aria-label="Project 2 of 5: myCloset">
+              <div class="project-media closet-media">
+                <img src="./assets/mycloset-home.png" alt="myCloset home screen" />
+                <img src="./assets/mycloset-generate.png" alt="myCloset outfit generation screen" />
               </div>
-            </div>
-          </article>
+              <div class="project-card-content">
+                <p class="project-type">Native iOS</p>
+                <h3>myCloset</h3>
+                <p>A private wardrobe app that isolates clothing from photos, organizes a searchable closet, and generates outfits from items the user owns.</p>
+                <p class="technology">SwiftUI · Apple Vision · Swift concurrency</p>
+                <p class="project-proof">91 unit tests · 10 UI journeys · no cloud AI</p>
+                <div class="project-links"><a href="https://github.com/mkodithuwakku/myCloset" target="_blank" rel="noreferrer">Source ↗</a></div>
+              </div>
+            </article>
 
-          <article class="project-item">
-            <div class="project-number">02</div>
-            <div class="project-content">
-              <div class="project-title-row"><h3>myCloset</h3><span>Native iOS</span></div>
-              <p>A private wardrobe app that isolates clothing from photos, organizes a searchable closet, and generates outfits from items the user owns.</p>
-              <p class="technology">SwiftUI · Apple Vision · Swift concurrency · local persistence</p>
-              <p class="project-proof">91 unit tests · 10 UI journeys · no cloud AI</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/myCloset" target="_blank" rel="noreferrer">Source ↗</a></div>
-            </div>
-          </article>
+            <article class="project-card" aria-label="Project 3 of 5: CasinoCompass">
+              <div class="project-media icon-media">
+                <img src="./assets/casino-compass.png" alt="CasinoCompass application icon" />
+              </div>
+              <div class="project-card-content">
+                <p class="project-type">Native iOS</p>
+                <h3>CasinoCompass</h3>
+                <p>A compass combining live location, device heading, bearing calculations, haptics, and a curated venue dataset.</p>
+                <p class="technology">SwiftUI · Core Location · MapKit · Haptics</p>
+                <div class="project-links"><a href="https://github.com/mkodithuwakku/CasinoCompass" target="_blank" rel="noreferrer">Source ↗</a></div>
+              </div>
+            </article>
 
-          <article class="project-item">
-            <div class="project-number">03</div>
-            <div class="project-content">
-              <div class="project-title-row"><h3>CasinoCompass</h3><span>Native iOS</span></div>
-              <p>A SwiftUI compass using live location, device heading, bearing calculations, haptics, and a curated dataset to point toward the nearest qualifying casino.</p>
-              <p class="technology">SwiftUI · Core Location · MapKit · Haptics</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/CasinoCompass" target="_blank" rel="noreferrer">Source ↗</a></div>
-            </div>
-          </article>
+            <article class="project-card" aria-label="Project 4 of 5: LockInModel">
+              <div class="project-media">
+                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/LockInModel" alt="GitHub preview for LockInModel project" />
+              </div>
+              <div class="project-card-content">
+                <p class="project-type">Sports data analysis</p>
+                <h3>LockInModel</h3>
+                <p>A fantasy-basketball decision tool that processes NBA game logs and produces explainable LOCK or WAIT recommendations.</p>
+                <p class="technology">Python · Pandas · NumPy · nba_api</p>
+                <div class="project-links"><a href="https://github.com/mkodithuwakku/LockInModel" target="_blank" rel="noreferrer">Source ↗</a></div>
+              </div>
+            </article>
 
-          <article class="project-item">
-            <div class="project-number">04</div>
-            <div class="project-content">
-              <div class="project-title-row"><h3>LockInModel</h3><span>Sports data analysis</span></div>
-              <p>A fantasy-basketball decision tool that processes NBA game logs and produces explainable LOCK or WAIT recommendations.</p>
-              <p class="technology">Python · Pandas · NumPy · nba_api · statistical modelling</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/LockInModel" target="_blank" rel="noreferrer">Source ↗</a></div>
-            </div>
-          </article>
+            <article class="project-card" aria-label="Project 5 of 5: Lanka Lingo">
+              <div class="project-media">
+                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/Lanka-Lingo" alt="GitHub preview for Lanka Lingo project" />
+              </div>
+              <div class="project-card-content">
+                <p class="project-type">Mobile web application</p>
+                <h3>Lanka Lingo</h3>
+                <p>A mobile-first Sinhala learning experience focused on speaking, listening, romanized prompts, and privacy-conscious voice handling.</p>
+                <p class="technology">TypeScript · React · voice interaction</p>
+                <div class="project-links"><a href="https://github.com/mkodithuwakku/Lanka-Lingo" target="_blank" rel="noreferrer">Source ↗</a></div>
+              </div>
+            </article>
+          </div>
 
-          <article class="project-item">
-            <div class="project-number">05</div>
-            <div class="project-content">
-              <div class="project-title-row"><h3>Lanka Lingo</h3><span>Mobile web application</span></div>
-              <p>A mobile-first Sinhala learning experience focused on speaking, listening, romanized prompts, and privacy-conscious voice handling.</p>
-              <p class="technology">TypeScript · React · voice interaction · mobile-first design</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/Lanka-Lingo" target="_blank" rel="noreferrer">Source ↗</a></div>
-            </div>
-          </article>
+          <div class="project-dots" role="group" aria-label="Choose a project">
+            <button type="button" data-project-index="0" aria-label="Show theSchedule" aria-current="true"></button>
+            <button type="button" data-project-index="1" aria-label="Show myCloset"></button>
+            <button type="button" data-project-index="2" aria-label="Show CasinoCompass"></button>
+            <button type="button" data-project-index="3" aria-label="Show LockInModel"></button>
+            <button type="button" data-project-index="4" aria-label="Show Lanka Lingo"></button>
+          </div>
         </div>
       </section>
 

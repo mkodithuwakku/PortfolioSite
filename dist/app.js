@@ -1,45 +1,64 @@
-const revealElements = document.querySelectorAll('.reveal');
+const carousel = document.querySelector('[data-project-carousel]');
 
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+if (carousel) {
+  const track = carousel.querySelector('[data-project-track]');
+  const cards = [...track.querySelectorAll('.project-card')];
+  const previousButton = carousel.querySelector('[data-project-previous]');
+  const nextButton = carousel.querySelector('[data-project-next]');
+  const counter = carousel.querySelector('[data-project-counter]');
+  const dots = [...carousel.querySelectorAll('[data-project-index]')];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let currentIndex = 0;
+  let frame;
 
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.12 }
-  );
+  function updateControls(index) {
+    currentIndex = Math.max(0, Math.min(cards.length - 1, index));
+    counter.value = `${currentIndex + 1} / ${cards.length}`;
+    counter.textContent = counter.value;
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === cards.length - 1;
 
-  revealElements.forEach((element) => revealObserver.observe(element));
-} else {
-  revealElements.forEach((element) => element.classList.add('is-visible'));
-}
+    dots.forEach((dot, dotIndex) => {
+      if (dotIndex === currentIndex) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+  }
 
-const sectionLinks = new Map(
-  [...document.querySelectorAll('.site-header nav a[href^="#"]')].map((link) => [
-    link.getAttribute('href').slice(1),
-    link,
-  ])
-);
+  function goToProject(index) {
+    const nextIndex = Math.max(0, Math.min(cards.length - 1, index));
+    track.scrollTo({
+      left: cards[nextIndex].offsetLeft - track.offsetLeft,
+      behavior: reduceMotion ? 'auto' : 'smooth',
+    });
+    updateControls(nextIndex);
+  }
 
-if ('IntersectionObserver' in window && sectionLinks.size) {
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+  previousButton.addEventListener('click', () => goToProject(currentIndex - 1));
+  nextButton.addEventListener('click', () => goToProject(currentIndex + 1));
+  dots.forEach((dot) => dot.addEventListener('click', () => goToProject(Number(dot.dataset.projectIndex))));
 
-        sectionLinks.forEach((link) => link.removeAttribute('aria-current'));
-        sectionLinks.get(entry.target.id)?.setAttribute('aria-current', 'true');
-      });
-    },
-    { rootMargin: '-28% 0px -58% 0px' }
-  );
-
-  sectionLinks.forEach((_, id) => {
-    const section = document.getElementById(id);
-    if (section) sectionObserver.observe(section);
+  track.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      goToProject(currentIndex - 1);
+    }
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      goToProject(currentIndex + 1);
+    }
   });
+
+  track.addEventListener('scroll', () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const closestIndex = cards.reduce((closest, card, index) => {
+        const distance = Math.abs(card.offsetLeft - track.offsetLeft - track.scrollLeft);
+        const closestDistance = Math.abs(cards[closest].offsetLeft - track.offsetLeft - track.scrollLeft);
+        return distance < closestDistance ? index : closest;
+      }, 0);
+      updateControls(closestIndex);
+    });
+  }, { passive: true });
+
+  updateControls(0);
 }
