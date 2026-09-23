@@ -1,44 +1,45 @@
-const progressBar = document.querySelector('.scroll-progress span');
+const revealElements = document.querySelectorAll('.reveal');
 
-function updateProgress() {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-  progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add('is-visible'));
 }
 
-window.addEventListener('scroll', updateProgress, { passive: true });
-updateProgress();
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
+const projectLinks = new Map(
+  [...document.querySelectorAll('.project-register a[href^="#"]')].map((link) => [
+    link.getAttribute('href').slice(1),
+    link,
+  ])
 );
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+if ('IntersectionObserver' in window && projectLinks.size) {
+  const projectObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-const filterButtons = [...document.querySelectorAll('.filter')];
-const projects = [...document.querySelectorAll('.project')];
+        projectLinks.forEach((link) => link.removeAttribute('aria-current'));
+        projectLinks.get(entry.target.id)?.setAttribute('aria-current', 'true');
+      });
+    },
+    { rootMargin: '-28% 0px -58% 0px' }
+  );
 
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const selected = button.dataset.filter;
-
-    filterButtons.forEach((candidate) => {
-      const isSelected = candidate === button;
-      candidate.classList.toggle('is-active', isSelected);
-      candidate.setAttribute('aria-pressed', String(isSelected));
-    });
-
-    projects.forEach((project) => {
-      const categories = project.dataset.categories.split(' ');
-      project.classList.toggle('is-filtered', selected !== 'all' && !categories.includes(selected));
-    });
+  projectLinks.forEach((_, id) => {
+    const section = document.getElementById(id);
+    if (section) projectObserver.observe(section);
   });
-});
+}

@@ -3,17 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#071018" />
+    <meta name="theme-color" content="#0b2b22" />
     <title>Malshaan Kodithuwakku — Software Engineer</title>
-    <meta
-      name="description"
-      content="Software engineering portfolio of Malshaan Kodithuwakku, a fifth-year engineer building production web systems, native iOS apps, and data-driven products."
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071018'/%3E%3Cpath d='M14 45V19h7l11 14 11-14h7v26h-8V31L32 44 22 31v14z' fill='%23c8ff4b'/%3E%3C/svg%3E"
-    />
+    <meta name="description" content="Software engineering portfolio of Malshaan Kodithuwakku, a fifth-year engineer building production web systems, native iOS apps, and data-driven products." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230b2b22'/%3E%3Cpath d='M13 14h9l10 17 10-17h9v36h-9V29L32 45 22 29v21h-9z' fill='%23f1ead8'/%3E%3Cpath d='M8 8h48v48H8z' fill='none' stroke='%23c8643e' stroke-width='2'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
@@ -21,223 +14,203 @@
     <a class="skip-link" href="#work">Skip to selected work</a>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Malshaan Kodithuwakku, home">
-        <span class="brand-mark">MK</span>
-        <span class="brand-copy">Software Engineer<br />Edmonton, AB</span>
-      </a>
+      <a class="brand" href="#top" aria-label="Malshaan Kodithuwakku, home"><span>MK</span><i>/</i><small>27</small></a>
+      <p>Software engineering<br />Edmonton, Alberta</p>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">
-          GitHub <span aria-hidden="true">↗</span>
-        </a>
+        <a href="#work"><span>01</span> Work</a>
+        <a href="#about"><span>02</span> Notes</a>
+        <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer"><span>03</span> Code ↗</a>
       </nav>
     </header>
 
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Available for 2027 new-grad roles</p>
-          <h1 id="hero-title">
-            I build software that<br />
-            <em>earns its place</em><br />
-            in the real world.
-          </h1>
-          <p class="hero-lede">
-            I’m Malshaan, a fifth-year software engineering student turning messy, human problems into dependable products—from a live retail scheduling system to private, on-device mobile experiences.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
-            <a class="button button-ghost" href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">See the code <span aria-hidden="true">↗</span></a>
+        <div class="hero-field">
+          <p class="field-label">Field note 00 <span>53.5461° N / 113.4938° W</span></p>
+          <h1 id="hero-title"><span>Malshaan</span><span>Kodithuwakku</span></h1>
+          <div class="hero-brief">
+            <p>Software engineer building dependable systems across the web, native iOS, and data.</p>
+            <p>Fifth-year student · 16 months inside Alberta’s energy industry · graduating 2027.</p>
           </div>
+          <div class="availability-note"><span aria-hidden="true"></span> Open to 2027 new-grad roles</div>
         </div>
 
-        <aside class="signal-board" aria-label="Engineering profile at a glance">
-          <div class="signal-topline">
-            <span>Current signal</span>
-            <span>05 projects / 03 domains</span>
-          </div>
-          <div class="signal-core">
-            <div class="signal-orbit orbit-one" aria-hidden="true"></div>
-            <div class="signal-orbit orbit-two" aria-hidden="true"></div>
-            <div class="signal-center">
-              <span>BUILD</span>
-              <strong>01</strong>
-              <small>learn → ship → verify</small>
-            </div>
-          </div>
-          <div class="signal-stack">
-            <div><span>WEB SYSTEMS</span><b>Next.js · Postgres · Auth</b></div>
-            <div><span>NATIVE MOBILE</span><b>SwiftUI · Vision · Core Location</b></div>
-            <div><span>DATA + AI</span><b>Python · statistics · voice flows</b></div>
-          </div>
+        <aside class="project-register" aria-label="Selected project index">
+          <div class="register-head"><span>Selected work</span><span>Index / 05</span></div>
+          <ol>
+            <li><a href="#the-schedule"><span>01</span><strong>theSchedule</strong><small>Full-stack operations</small></a></li>
+            <li><a href="#my-closet"><span>02</span><strong>myCloset</strong><small>Native iOS · Vision</small></a></li>
+            <li><a href="#casino-compass"><span>03</span><strong>CasinoCompass</strong><small>Location · Mobile</small></a></li>
+            <li><a href="#lock-in-model"><span>04</span><strong>LockInModel</strong><small>Sports · Statistics</small></a></li>
+            <li><a href="#lanka-lingo"><span>05</span><strong>Lanka Lingo</strong><small>Language · Voice</small></a></li>
+          </ol>
+          <a class="register-link" href="#work">Open the case files <span aria-hidden="true">↓</span></a>
         </aside>
       </section>
 
       <section class="proof-strip" aria-label="Candidate highlights">
-        <article><strong>16</strong><span>months in Alberta’s<br />energy industry</span></article>
-        <article><strong>05</strong><span>projects selected for<br />depth, not volume</span></article>
-        <article><strong>3×</strong><span>web, mobile, and<br />data perspectives</span></article>
-        <article><strong>2027</strong><span>software engineering<br />graduate</span></article>
+        <p>Profile ledger</p>
+        <article><span>Industry</span><strong>16 months</strong><small>Alberta energy</small></article>
+        <article><span>Practice</span><strong>Web / iOS / Data</strong><small>Across the stack</small></article>
+        <article><span>Current</span><strong>5th year</strong><small>Software engineering</small></article>
+        <article><span>Next</span><strong>2027</strong><small>New-grad roles</small></article>
       </section>
 
       <section class="work-section" id="work" aria-labelledby="work-title">
-        <div class="section-heading reveal">
-          <div>
-            <p class="eyebrow">Selected work / 2025–2026</p>
-            <h2 id="work-title">Five projects.<br /><em>One engineering story.</em></h2>
-          </div>
-          <p>
-            Each project explores a different surface—operations, mobile privacy, location, sports decisions, and language learning—while applying the same habit: make the behavior understandable, testable, and useful.
-          </p>
-        </div>
+        <header class="work-intro reveal">
+          <p class="section-code">Project folio / 01—05</p>
+          <h2 id="work-title">Five surfaces.<br /><em>One way of working.</em></h2>
+          <p>Find the real constraint, make the behaviour legible, and build enough evidence to trust the result.</p>
+        </header>
 
-        <div class="filters reveal" role="group" aria-label="Filter projects by field">
-          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
-          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web systems</button>
-          <button class="filter" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
-          <button class="filter" type="button" data-filter="data" aria-pressed="false">Data + AI</button>
-        </div>
-
-        <div class="project-grid">
-          <article class="project project-schedule reveal" data-categories="web" id="the-schedule">
-            <div class="project-copy">
-              <div class="project-kicker"><span>01</span> Flagship / Full-stack system</div>
+        <article class="case-file flagship reveal" id="the-schedule">
+          <header class="case-header"><span>Case file 01</span><span>Web systems</span><span>Flagship build</span></header>
+          <div class="flagship-body">
+            <div class="case-copy">
+              <p class="case-label">A real workflow, rebuilt</p>
               <h3>theSchedule</h3>
-              <p class="project-intro">
-                A scheduling platform replacing spreadsheets and paper for a real retail team—covering employee availability, schedule generation, publishing, coverage, swaps, reporting, backups, and email workflows.
-              </p>
-              <ul class="proof-list">
-                <li><strong>Live controlled UAT</strong><span>Built around a real store’s operating workflow</span></li>
-                <li><strong>69 passing tests</strong><span>Including authorization, concurrency, backups, and date boundaries</span></li>
-                <li><strong>Full delivery stack</strong><span>Next.js, TypeScript, Prisma, Neon, Auth.js, Resend, Vercel</span></li>
-              </ul>
-              <div class="project-links">
-                <a href="https://mafm-schedule.vercel.app" target="_blank" rel="noreferrer">Open live UAT <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/mkodithuwakku/theSchedule" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+              <p class="case-lede">A scheduling platform replacing spreadsheets and paper for a retail team—from availability and schedule generation through publishing, swaps, reporting, backups, and email workflows.</p>
+              <dl class="case-facts">
+                <div><dt>Evidence</dt><dd>69 passing tests</dd></div>
+                <div><dt>Environment</dt><dd>Controlled live UAT</dd></div>
+                <div><dt>System</dt><dd>Next.js · TypeScript · Prisma · Neon · Auth.js</dd></div>
+              </dl>
+              <div class="case-links">
+                <a href="https://mafm-schedule.vercel.app" target="_blank" rel="noreferrer">Open live UAT <span>↗</span></a>
+                <a href="https://github.com/mkodithuwakku/theSchedule" target="_blank" rel="noreferrer">Read the source <span>↗</span></a>
               </div>
             </div>
 
-            <div class="schedule-visual" aria-label="Scheduling workflow visualization">
-              <div class="window-bar"><i></i><i></i><i></i><span>MANAGER / WEEK 02</span></div>
-              <div class="schedule-toolbar">
-                <div><small>Coverage</small><strong>Ready to publish</strong></div>
-                <span class="status-pill">12 / 12 shifts</span>
+            <div class="schedule-sheet" aria-label="Illustration of theSchedule weekly planning interface">
+              <div class="sheet-caption"><span>Manager view</span><span>Week 02</span></div>
+              <div class="sheet-status"><div><small>Coverage</small><strong>Ready to publish</strong></div><b>12 / 12</b></div>
+              <div class="schedule-table" aria-hidden="true">
+                <span class="day">Mon 12</span><span class="day">Tue 13</span><span class="day">Wed 14</span>
+                <div class="shift"><b>OPEN</b><small>09:00–14:00</small><i>Assigned</i></div>
+                <div class="shift shift-clay"><b>MID</b><small>11:00–17:00</small><i>Assigned</i></div>
+                <div class="shift"><b>CLOSE</b><small>15:00–21:00</small><i>Assigned</i></div>
+                <div class="shift shift-open"><b>MID</b><small>11:00–17:00</small><i>Available</i></div>
+                <div class="shift"><b>OPEN</b><small>09:00–14:00</small><i>Assigned</i></div>
+                <div class="shift shift-clay"><b>CLOSE</b><small>15:00–21:00</small><i>Assigned</i></div>
               </div>
-              <div class="schedule-days" aria-hidden="true"><span>MON 12</span><span>TUE 13</span><span>WED 14</span><span>THU 15</span></div>
-              <div class="schedule-grid" aria-hidden="true">
-                <div class="shift shift-a"><b>OPEN</b><span>09:00–14:00</span><small>Assigned</small></div>
-                <div class="shift shift-b"><b>MID</b><span>11:00–17:00</span><small>Assigned</small></div>
-                <div class="shift shift-a"><b>CLOSE</b><span>15:00–21:00</span><small>Assigned</small></div>
-                <div class="shift shift-muted"><b>OPEN</b><span>09:00–14:00</span><small>Available</small></div>
-                <div class="shift shift-c"><b>CLOSE</b><span>15:00–21:00</span><small>Assigned</small></div>
-                <div class="shift shift-b"><b>MID</b><span>11:00–17:00</span><small>Assigned</small></div>
-              </div>
-              <div class="schedule-footer"><span><i class="dot dot-green"></i> 6 employees ready</span><span>Version 18 · protected</span></div>
+              <div class="sheet-foot"><span>6 employees ready</span><span>Version 18 · protected</span></div>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project project-closet reveal" data-categories="mobile" id="my-closet">
-            <div class="phone-gallery" aria-label="myCloset application screenshots">
-              <figure class="phone phone-back"><img src="./assets/mycloset-home.png" alt="myCloset home screen showing a generated outfit of the day" /></figure>
-              <figure class="phone phone-front"><img src="./assets/mycloset-generate.png" alt="myCloset fitting room screen showing a generated outfit" /></figure>
-            </div>
-            <div class="project-copy">
-              <div class="project-kicker"><span>02</span> Native iOS / On-device intelligence</div>
+        <section class="mobile-study" aria-labelledby="mobile-title">
+          <header class="study-header reveal">
+            <p class="section-code">Field study / Native iOS</p>
+            <h2 id="mobile-title">Software that has to<br /><em>feel right in the hand.</em></h2>
+          </header>
+
+          <article class="closet-case reveal" id="my-closet">
+            <div class="closet-copy">
+              <div class="case-number">02</div>
+              <p class="case-label">Private, on-device intelligence</p>
               <h3>myCloset</h3>
-              <p class="project-intro">
-                A private wardrobe app that isolates garments from photos, organizes a searchable closet, and generates outfits from pieces the user actually owns—all without requiring an account or cloud AI.
-              </p>
-              <div class="metric-row">
-                <div><strong>91</strong><span>unit tests</span></div>
-                <div><strong>10</strong><span>UI journeys</span></div>
-                <div><strong>0</strong><span>cloud AI calls</span></div>
-              </div>
-              <p class="technical-note">Apple Vision, bounded color heuristics, Swift concurrency, atomic local persistence, and constraint-aware outfit generation—with manual recovery kept inside the experience.</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/myCloset" target="_blank" rel="noreferrer">Explore the iOS project <span aria-hidden="true">↗</span></a></div>
+              <p>A private wardrobe app that isolates garments from photos, organizes a searchable closet, and generates outfits from pieces the user actually owns—without requiring an account or cloud AI.</p>
+              <dl class="metric-ledger">
+                <div><dt>91</dt><dd>unit tests</dd></div>
+                <div><dt>10</dt><dd>UI journeys</dd></div>
+                <div><dt>0</dt><dd>cloud AI calls</dd></div>
+              </dl>
+              <p class="method-note">Apple Vision · Swift concurrency · atomic local persistence · constraint-aware generation</p>
+              <a class="underlined-link" href="https://github.com/mkodithuwakku/myCloset" target="_blank" rel="noreferrer">Explore the iOS project ↗</a>
+            </div>
+            <div class="device-plates" aria-label="myCloset application screenshots">
+              <figure><img src="./assets/mycloset-home.png" alt="myCloset home screen showing a generated outfit of the day" /><figcaption>Home / Outfit of the day</figcaption></figure>
+              <figure><img src="./assets/mycloset-generate.png" alt="myCloset fitting room screen showing a generated outfit" /><figcaption>Fitting room / Generate</figcaption></figure>
             </div>
           </article>
 
-          <article class="project project-compass reveal" data-categories="mobile" id="casino-compass">
-            <div class="project-kicker"><span>03</span> Native iOS / Location</div>
-            <div class="compass-art">
-              <div class="app-icon"><img src="./assets/casino-compass.png" alt="CasinoCompass app icon" /></div>
-              <div class="bearing-line" aria-hidden="true"><span></span></div>
+          <article class="compass-case reveal" id="casino-compass">
+            <div class="compass-plate">
+              <span class="axis axis-x" aria-hidden="true"></span><span class="axis axis-y" aria-hidden="true"></span>
+              <img src="./assets/casino-compass.png" alt="CasinoCompass app icon" />
+              <p>Heading 247°<br />Nearest match: located</p>
             </div>
-            <h3>CasinoCompass</h3>
-            <p>A novelty SwiftUI compass that combines live location, device heading, bearing math, haptics, and a curated venue dataset to point toward the nearest qualifying casino.</p>
-            <div class="tag-row"><span>SwiftUI</span><span>Core Location</span><span>MapKit</span><span>Haptics</span></div>
-            <a class="card-link" href="https://github.com/mkodithuwakku/CasinoCompass" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
+            <div class="compass-copy">
+              <div class="case-number">03</div>
+              <p class="case-label">Location, heading, and haptics</p>
+              <h3>Casino<wbr />Compass</h3>
+              <p>A novelty SwiftUI compass combining live location, device heading, bearing math, haptics, and a curated venue dataset to point toward the nearest qualifying casino.</p>
+              <p class="method-note">SwiftUI · Core Location · MapKit · Haptics</p>
+              <a class="underlined-link" href="https://github.com/mkodithuwakku/CasinoCompass" target="_blank" rel="noreferrer">View project ↗</a>
+            </div>
           </article>
+        </section>
 
-          <article class="project project-lockin reveal" data-categories="data" id="lock-in-model">
-            <div class="project-kicker"><span>04</span> Sports / Statistical analysis</div>
-            <div class="lockin-display" aria-label="LockInModel decision pipeline">
-              <div class="score-line"><span>LOCK SIGNAL</span><b>76%</b></div>
-              <svg viewBox="0 0 560 180" role="img" aria-label="Illustrative weighted player form curve">
-                <defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c8ff4b" stop-opacity=".48" /><stop offset="1" stop-color="#c8ff4b" stop-opacity="0" /></linearGradient></defs>
-                <path class="chart-area" d="M0,150 C62,142 84,111 132,123 C194,139 216,72 272,84 C336,98 354,43 418,58 C468,70 492,30 560,18 L560,180 L0,180 Z" />
-                <path class="chart-line" d="M0,150 C62,142 84,111 132,123 C194,139 216,72 272,84 C336,98 354,43 418,58 C468,70 492,30 560,18" />
-                <line x1="0" y1="105" x2="560" y2="105" class="chart-guide" />
-              </svg>
-              <div class="model-factors"><span>recent form</span><span>career prior</span><span>variance</span><span>games left</span></div>
-            </div>
-            <h3>LockInModel</h3>
-            <p>A fantasy-basketball decision tool that turns NBA game logs into explainable LOCK or WAIT recommendations using recency weighting, career priors, early-season variance guards, and probability estimates.</p>
-            <div class="tag-row"><span>Python</span><span>Pandas</span><span>NumPy</span><span>NBA data</span></div>
-            <a class="card-link" href="https://github.com/mkodithuwakku/LockInModel" target="_blank" rel="noreferrer">Inspect the model <span aria-hidden="true">↗</span></a>
-          </article>
+        <article class="data-case reveal" id="lock-in-model">
+          <div class="data-copy">
+            <div class="case-number">04</div>
+            <p class="case-label">Sports decisions, made explainable</p>
+            <h3>LockIn<wbr />Model</h3>
+            <p>A fantasy-basketball decision tool that turns NBA game logs into LOCK or WAIT recommendations using recency weighting, career priors, early-season variance guards, and probability estimates.</p>
+            <a class="underlined-link light" href="https://github.com/mkodithuwakku/LockInModel" target="_blank" rel="noreferrer">Inspect the model ↗</a>
+          </div>
+          <div class="model-sheet" aria-label="Illustrative LockInModel recommendation summary">
+            <div class="model-head"><span>Player decision record</span><span>Sample / 04</span></div>
+            <div class="model-score"><span>Recommendation</span><strong>LOCK</strong><b>76%</b></div>
+            <svg viewBox="0 0 640 220" role="img" aria-label="Illustrative weighted player-form curve">
+              <path class="chart-area" d="M0,186 C72,178 102,140 154,153 C226,171 248,94 312,110 C386,128 408,60 482,78 C538,92 564,42 640,25 L640,220 L0,220 Z" />
+              <path class="chart-line" d="M0,186 C72,178 102,140 154,153 C226,171 248,94 312,110 C386,128 408,60 482,78 C538,92 564,42 640,25" />
+              <line x1="0" y1="130" x2="640" y2="130" class="chart-guide" />
+            </svg>
+            <div class="factor-ledger"><span>Recent form</span><span>Career prior</span><span>Variance</span><span>Games left</span></div>
+            <div class="model-foot"><span>Python · Pandas · NumPy</span><span>Not trained ML</span></div>
+          </div>
+        </article>
 
-          <article class="project project-lingo reveal" data-categories="data web" id="lanka-lingo">
-            <div class="lingo-copy">
-              <div class="project-kicker"><span>05</span> Applied AI / Language learning</div>
-              <h3>Lanka Lingo</h3>
-              <p class="project-intro">A mobile-first Sinhala learning experience centered on speaking and listening—not worksheets. Guided conversations use romanized prompts, small English captions, repair feedback, and privacy-first voice handling.</p>
-              <div class="project-links"><a href="https://github.com/mkodithuwakku/Lanka-Lingo" target="_blank" rel="noreferrer">Explore the MVP foundation <span aria-hidden="true">↗</span></a></div>
+        <article class="language-case reveal" id="lanka-lingo">
+          <header class="language-head"><span>Case file 05</span><span>Language / Voice</span></header>
+          <div class="language-grid">
+            <div class="language-copy">
+              <p class="case-label">Conversation before coursework</p>
+              <h3>Lanka<br /><em>Lingo</em></h3>
+              <p>A mobile-first Sinhala learning experience centered on speaking and listening. Guided conversations use romanized prompts, small English captions, repair feedback, and privacy-first voice handling.</p>
+              <a class="underlined-link" href="https://github.com/mkodithuwakku/Lanka-Lingo" target="_blank" rel="noreferrer">Explore the MVP foundation ↗</a>
             </div>
-            <div class="conversation-demo" aria-label="Example Lanka Lingo guided conversation">
-              <div class="conversation-header"><span>GUIDED CONVERSATION</span><span>01 / 10</span></div>
-              <div class="bubble bubble-tutor"><small>Listen + repeat</small><strong>ආයුබෝවන්</strong><span>ayubowan · hello</span></div>
-              <div class="bubble bubble-learner"><small>Suggested reply</small><strong>කොහොමද?</strong><span>kohomada? · how are you?</span></div>
-              <button class="speak-control" type="button" aria-label="Demonstration microphone control"><span aria-hidden="true">●</span> Hold to speak</button>
-              <p><span class="shield" aria-hidden="true">◇</span> Raw audio storage is off by default</p>
+            <div class="dialogue-sheet" aria-label="Example Lanka Lingo guided conversation">
+              <div class="dialogue-meta"><span>Guided conversation</span><span>01 / 10</span></div>
+              <div class="dialogue-line tutor"><small>Listen + repeat</small><strong>ආයුබෝවන්</strong><span>ayubowan · hello</span></div>
+              <div class="dialogue-rule"><span>your turn</span></div>
+              <div class="dialogue-line learner"><small>Suggested reply</small><strong>කොහොමද?</strong><span>kohomada? · how are you?</span></div>
+              <p class="privacy-note">Raw audio storage is off by default.</p>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
 
       <section class="about-section" id="about" aria-labelledby="about-title">
-        <div class="about-title reveal">
-          <p class="eyebrow">About / The engineer behind the work</p>
-          <h2 id="about-title">Broad by curiosity.<br /><em>Grounded by ownership.</em></h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <p class="about-lede">I’m a fifth-year software engineering student in Edmonton with 16 months of industry experience in Alberta’s energy sector. I like software with a visible reason to exist: a store that needs a better workflow, a mobile interaction that must feel natural, or a sports decision that should be explainable.</p>
-            <p>Agentic tools help me move quickly, but the engineering standard stays the same: understand the architecture, make tradeoffs explicit, test the important boundaries, and be able to explain why the system behaves the way it does.</p>
+        <aside><span>Working notes</span><strong>06</strong><small>Engineer / Person / Candidate</small></aside>
+        <div class="about-body">
+          <p class="section-code">About / The person behind the work</p>
+          <h2 id="about-title">Curious across the stack.<br /><em>Serious about ownership.</em></h2>
+          <div class="about-copy">
+            <p class="about-lede">I’m a fifth-year software engineering student in Edmonton with 16 months of experience in Alberta’s energy sector. I’m drawn to software with a visible reason to exist.</p>
+            <p>That might be a store that needs a better workflow, a mobile interaction that must feel natural, or a sports decision that should be explainable. Agentic tools help me move quickly; understanding the architecture, testing the boundaries, and owning the explanation are still my responsibility.</p>
           </div>
-          <div class="principles reveal" aria-label="Engineering principles">
-            <article><span>01</span><div><h3>Start with the real constraint</h3><p>People, privacy, devices, data quality, and operating habits shape the system.</p></div></article>
-            <article><span>02</span><div><h3>Make failure visible</h3><p>Recovery paths, validation, tests, and honest product boundaries are part of the build.</p></div></article>
-            <article><span>03</span><div><h3>Own the explanation</h3><p>A project is not finished until I can trace it, defend it, debug it, and improve it.</p></div></article>
-          </div>
+          <ol class="working-method">
+            <li><span>01</span><strong>Find the real constraint.</strong><p>People, privacy, devices, data quality, and operating habits shape the system.</p></li>
+            <li><span>02</span><strong>Make failure visible.</strong><p>Recovery paths and honest boundaries belong in the product, not just the postmortem.</p></li>
+            <li><span>03</span><strong>Own the explanation.</strong><p>I should be able to trace the behaviour, defend the tradeoff, and improve the result.</p></li>
+          </ol>
         </div>
       </section>
 
       <section class="contact-section reveal" aria-labelledby="contact-title">
-        <p class="eyebrow">Next / Let’s build something useful</p>
-        <h2 id="contact-title">Looking for a junior engineer<br />who can move across the stack?</h2>
-        <p>I’m preparing for 2027 new-grad software engineering opportunities across product, full-stack, mobile, and data-oriented teams.</p>
-        <a class="button button-primary" href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">Start with my GitHub <span aria-hidden="true">↗</span></a>
+        <p class="section-code">Next / 2027</p>
+        <h2 id="contact-title">Available for junior software engineering roles.</h2>
+        <p>Product, full-stack, mobile, or data-oriented teams—especially where useful software and thoughtful execution matter.</p>
+        <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">Continue on GitHub <span>↗</span></a>
       </section>
     </main>
 
     <footer>
       <div><strong>Malshaan Kodithuwakku</strong><span>Software Engineering · Edmonton, Alberta</span></div>
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
-      <span>Designed around evidence, not buzzwords.</span>
+      <a href="#top">Back to top ↑</a>
+      <span>Field notes, case files, and work that can be explained.</span>
     </footer>
   </body>
 </html>
