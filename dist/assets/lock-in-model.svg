@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">LockInModel illustrative decision trace</title>
+  <desc id="desc">A diagnostic chart showing recent fantasy points, a recency-weighted baseline, a career prior, and a variance guard.</desc>
+  <rect width="1200" height="750" fill="#173c30"/>
+  <text x="72" y="82" fill="#f7f3e8" font-family="Arial, sans-serif" font-size="42" font-weight="700">LockInModel decision trace</text>
+  <text x="72" y="118" fill="#b7c5be" font-family="Arial, sans-serif" font-size="20">Illustrative diagnostic view of the statistical decision engine</text>
+  <g stroke="#6d8279" stroke-opacity=".34" stroke-width="1">
+    <line x1="90" y1="190" x2="1120" y2="190"/>
+    <line x1="90" y1="290" x2="1120" y2="290"/>
+    <line x1="90" y1="390" x2="1120" y2="390"/>
+    <line x1="90" y1="490" x2="1120" y2="490"/>
+    <line x1="90" y1="590" x2="1120" y2="590"/>
+  </g>
+  <g fill="#b7c5be" font-family="Arial, sans-serif" font-size="17">
+    <text x="45" y="196">60</text><text x="45" y="296">50</text><text x="45" y="396">40</text><text x="45" y="496">30</text><text x="45" y="596">20</text>
+    <text x="85" y="635">G1</text><text x="195" y="635">G2</text><text x="305" y="635">G3</text><text x="415" y="635">G4</text><text x="525" y="635">G5</text><text x="635" y="635">G6</text><text x="745" y="635">G7</text><text x="855" y="635">G8</text><text x="965" y="635">G9</text><text x="1070" y="635">G10</text>
+  </g>
+  <path d="M90 500 L200 460 L310 530 L420 410 L530 440 L640 350 L750 400 L860 370 L970 320 L1080 345 L1080 475 L970 450 L860 500 L750 525 L640 480 L530 565 L420 535 L310 650 L200 585 L90 625 Z" fill="#2f604e" opacity=".46"/>
+  <line x1="90" y1="440" x2="1120" y2="440" stroke="#8ba99b" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M90 505 C190 500 250 485 310 478 S420 462 530 450 S640 427 750 413 S860 395 970 370 S1040 360 1080 352" fill="none" stroke="#d58158" stroke-width="7" stroke-linecap="round"/>
+  <polyline points="90,410 200,370 310,440 420,320 530,350 640,260 750,310 860,280 970,230 1080,255" fill="none" stroke="#f7f3e8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f7f3e8">
+    <circle cx="90" cy="410" r="8"/><circle cx="200" cy="370" r="8"/><circle cx="310" cy="440" r="8"/><circle cx="420" cy="320" r="8"/><circle cx="530" cy="350" r="8"/><circle cx="640" cy="260" r="8"/><circle cx="750" cy="310" r="8"/><circle cx="860" cy="280" r="8"/><circle cx="970" cy="230" r="8"/><circle cx="1080" cy="255" r="8"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18">
+    <rect x="640" y="668" width="18" height="5" fill="#f7f3e8"/><text x="670" y="676" fill="#dce4e0">Fantasy points</text>
+    <rect x="820" y="668" width="18" height="5" fill="#d58158"/><text x="850" y="676" fill="#dce4e0">Weighted baseline</text>
+    <rect x="1040" y="668" width="18" height="5" fill="#8ba99b"/><text x="1070" y="676" fill="#dce4e0">Prior</text>
+  </g>
+  <text x="72" y="700" fill="#b7c5be" font-family="Arial, sans-serif" font-size="18">Inputs: recent form · career prior · small-sample variance guard · remaining games</text>
+</svg>

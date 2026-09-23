@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#173c30" />
     <title>Malshaan Kodithuwakku — Software Engineer</title>
-    <meta name="description" content="Portfolio of Malshaan Kodithuwakku, a software engineering student with experience in full-stack development, mobile applications, data analysis, and utility-sector systems." />
+    <meta name="description" content="Portfolio of Malshaan Kodithuwakku, a new-grad software engineer with experience in backend systems, full-stack development, enterprise integration, native iOS, and data analysis." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23173c30'/%3E%3Cpath d='M13 14h9l10 17 10-17h9v36h-9V29L32 45 22 29v21h-9z' fill='%23f7f3e8'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
@@ -19,16 +19,22 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="intro" id="top" aria-labelledby="intro-title">
-        <p class="eyebrow">Software Engineer · Edmonton, Alberta</p>
+        <p class="eyebrow">New-grad software engineer · Available January 2027</p>
         <h1 id="intro-title">Malshaan Kodithuwakku</h1>
-        <p class="intro-copy">I’m a fifth-year Computer Engineering Software student at the University of Alberta. I have 16 months of co-op experience building operational software at Apex Utilities and ATCO Gas, and I graduate in December 2026.</p>
-        <p class="intro-focus">I build full-stack applications, native iOS experiences, and data tools with an emphasis on clear behaviour, testing, and maintainable systems.</p>
+        <p class="intro-copy">I build software for real operations: a scheduling platform used by multiple West Edmonton Mall businesses, an Alberta One-Call integration that turns locate requests into field work orders, and an enterprise quality-assurance app taken from requirements through deployment.</p>
+        <p class="intro-focus">My strongest work sits at the backend and full-stack boundary—data models, authenticated APIs, integration logic, failure recovery, testing, and deployment. I also build native iOS applications, data tools, and systems software when the problem calls for them.</p>
+        <ul class="intro-details" aria-label="New graduate details">
+          <li><strong>BSc Computer Engineering Software</strong><span>University of Alberta · December 2026</span></li>
+          <li><strong>Four co-op work terms completed</strong><span>Apex Utilities · ATCO Gas</span></li>
+          <li><strong>Based in Edmonton</strong><span>Open to roles starting January 2027</span></li>
+        </ul>
         <div class="intro-links" aria-label="Profile links">
           <a href="mailto:kodithuw@ualberta.ca">Email</a>
           <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -37,10 +43,7 @@
       </section>
 
       <section class="section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading">
-          <h2 id="experience-title">Experience</h2>
-          <p>16 months across two Alberta utility companies.</p>
-        </div>
+        <div class="section-heading section-heading-single"><h2 id="experience-title">Experience</h2></div>
 
         <div class="experience-list">
           <article class="experience-item">
@@ -51,11 +54,12 @@
             </div>
             <div class="experience-body">
               <ul>
-                <li>Redesigned a Node-RED integration that transforms Alberta One-Call XML tickets into IBM MAS 9 work orders.</li>
-                <li>Integrated Amazon S3 image uploads, work-order attachment links, and API-key authentication over HTTPS.</li>
-                <li>Tested normal and failure scenarios including malformed XML, invalid dates, and simulated S3 failures.</li>
+                <li>Redesigned a legacy Alberta One-Call integration for IBM MAS 9 using Node-RED and JavaScript, transforming XML locate requests into work orders through authenticated SOAP APIs.</li>
+                <li>Integrated Amazon S3 for work-order attachments and separated environment-specific configuration from application logic for maintainable deployments across development, test, and production.</li>
+                <li>Tested five ticket types and failure paths, validating field mappings, attachment handling, malformed inputs, invalid dates, and continued processing after upload failures.</li>
+                <li>Developed SQL queries and reports to retrieve and present operational data for internal reporting.</li>
               </ul>
-              <p class="technology">Node-RED · JavaScript · XML · SOAP · Amazon S3 · IBM MAS 9</p>
+              <p class="technology">Node-RED · JavaScript · SQL · XML · SOAP · REST · Amazon S3 · IBM MAS 9</p>
             </div>
           </article>
 
@@ -67,9 +71,10 @@
             </div>
             <div class="experience-body">
               <ul>
-                <li>Led a Quality Assurance Service Request application from requirements and prototyping through deployment.</li>
-                <li>Developed data workflows across Oracle, Excel VBA, and Microsoft Power Platform.</li>
-                <li>Worked directly with stakeholders and created documentation and training for technical handover.</li>
+                <li>Led an enterprise Quality Assurance Service Request application from requirements gathering and iterative prototyping through development and deployment.</li>
+                <li>Facilitated stakeholder sessions to refine scope, incorporate user feedback, and turn operational needs into clear application workflows.</li>
+                <li>Developed and maintained cross-platform data workflows using Oracle, Excel VBA, Power Apps, Power Automate, and SharePoint.</li>
+                <li>Created technical documentation, support procedures, and training material; mentored colleagues to make the handover sustainable.</li>
               </ul>
               <p class="technology">Power Apps · Power Automate · Oracle · Excel VBA · SharePoint</p>
             </div>
@@ -79,8 +84,8 @@
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <h2 id="projects-title">Selected projects</h2>
-          <p>Swipe or use the arrows to move through the projects.</p>
+          <h2 id="projects-title">Projects</h2>
+          <p>Swipe or use the arrows to move between projects.</p>
         </div>
 
         <div class="project-carousel" data-project-carousel>
@@ -90,17 +95,22 @@
             <button type="button" data-project-next aria-label="Show next project">→</button>
           </div>
 
-          <div class="project-track" data-project-track tabindex="0" aria-label="Selected projects carousel">
+          <div class="project-track" data-project-track tabindex="0" aria-label="Projects carousel">
             <article class="project-card" aria-label="Project 1 of 5: theSchedule">
-              <div class="project-media">
-                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/theSchedule" alt="GitHub preview for theSchedule project" />
+              <div class="project-media schedule-media">
+                <img src="./assets/the-schedule.png" alt="theSchedule employee scheduling and sign-in interface" />
               </div>
               <div class="project-card-content">
-                <p class="project-type">Full-stack web application</p>
+                <p class="project-type">Freelance software engineer · June–September 2026</p>
                 <h3>theSchedule</h3>
-                <p>A workforce scheduling system covering availability, schedule creation, publishing, shift changes, reporting, backups, and email workflows.</p>
-                <p class="technology">Next.js · TypeScript · Prisma · PostgreSQL</p>
-                <p class="project-proof">69 passing tests · live UAT</p>
+                <p>A scheduling application used by multiple businesses in West Edmonton Mall, built from requirements and data modelling through deployment and user acceptance testing.</p>
+                <ul class="project-details">
+                  <li>Neon PostgreSQL and Prisma backend with migrations, authenticated APIs, and server-side role checks.</li>
+                  <li>Version checks prevent stale clients from overwriting shared schedules; backups use integrity checks before restore.</li>
+                  <li>Regression coverage spans authorization, concurrent updates, notifications, scheduling rules, and recovery workflows.</li>
+                </ul>
+                <p class="technology">Next.js · TypeScript · Prisma · Neon PostgreSQL · Auth.js · Resend · Vercel</p>
+                <p class="project-proof">69 passing tests · live UAT · documented backup and release procedures</p>
                 <div class="project-links">
                   <a href="https://mafm-schedule.vercel.app" target="_blank" rel="noreferrer">Live UAT ↗</a>
                   <a href="https://github.com/mkodithuwakku/theSchedule" target="_blank" rel="noreferrer">Source ↗</a>
@@ -114,11 +124,16 @@
                 <img src="./assets/mycloset-generate.png" alt="myCloset outfit generation screen" />
               </div>
               <div class="project-card-content">
-                <p class="project-type">Native iOS</p>
+                <p class="project-type">Native iOS · On-device computer vision</p>
                 <h3>myCloset</h3>
-                <p>A private wardrobe app that isolates clothing from photos, organizes a searchable closet, and generates outfits from items the user owns.</p>
-                <p class="technology">SwiftUI · Apple Vision · Swift concurrency</p>
-                <p class="project-proof">91 unit tests · 10 UI journeys · no cloud AI</p>
+                <p>A private wardrobe application that turns garment photos into a searchable closet and generates outfits without requiring an account or cloud AI.</p>
+                <ul class="project-details">
+                  <li>Vision-based garment isolation combines bounded image and colour heuristics with a manual recovery path.</li>
+                  <li>A constraint-aware recommendation engine separates hard compatibility rules from soft scoring.</li>
+                  <li>Swift concurrency, cancellation, and atomic local persistence protect long-running image work and immutable outfit history.</li>
+                </ul>
+                <p class="technology">SwiftUI · Apple Vision · Swift concurrency · local persistence · XCTest</p>
+                <p class="project-proof">91 unit tests · 10 UI journeys · passing iOS CI · clean simulator build</p>
                 <div class="project-links"><a href="https://github.com/mkodithuwakku/myCloset" target="_blank" rel="noreferrer">Source ↗</a></div>
               </div>
             </article>
@@ -128,36 +143,52 @@
                 <img src="./assets/casino-compass.png" alt="CasinoCompass application icon" />
               </div>
               <div class="project-card-content">
-                <p class="project-type">Native iOS</p>
+                <p class="project-type">Native iOS · Location systems</p>
                 <h3>CasinoCompass</h3>
-                <p>A compass combining live location, device heading, bearing calculations, haptics, and a curated venue dataset.</p>
-                <p class="technology">SwiftUI · Core Location · MapKit · Haptics</p>
+                <p>A location-aware compass that continuously selects a destination and turns sensor data into a stable directional interface.</p>
+                <ul class="project-details">
+                  <li>Combines live Core Location updates with device heading, bearing calculations, angle normalization, and nearest-venue selection.</li>
+                  <li>Handles permissions, unavailable sensor data, haptic feedback, map handoff, and sharing inside a SwiftUI state model.</li>
+                </ul>
+                <p class="technology">SwiftUI · Core Location · MapKit · bearing math · haptics</p>
+                <p class="project-proof">Clean iPhone Simulator build verified</p>
                 <div class="project-links"><a href="https://github.com/mkodithuwakku/CasinoCompass" target="_blank" rel="noreferrer">Source ↗</a></div>
               </div>
             </article>
 
             <article class="project-card" aria-label="Project 4 of 5: LockInModel">
-              <div class="project-media">
-                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/LockInModel" alt="GitHub preview for LockInModel project" />
+              <div class="project-media model-media">
+                <img src="./assets/lock-in-model.svg" alt="Illustrative LockInModel diagnostic chart with fantasy points and a recency-weighted baseline" />
               </div>
               <div class="project-card-content">
-                <p class="project-type">Sports data analysis</p>
+                <p class="project-type">Sports data pipeline · Statistical decision engine</p>
                 <h3>LockInModel</h3>
-                <p>A fantasy-basketball decision tool that processes NBA game logs and produces explainable LOCK or WAIT recommendations.</p>
-                <p class="technology">Python · Pandas · NumPy · nba_api</p>
+                <p>A fantasy-basketball tool that turns NBA game logs, schedules, and career statistics into explainable LOCK or WAIT recommendations.</p>
+                <ul class="project-details">
+                  <li>Retrieves and normalizes box scores, career priors, and remaining schedules into configurable fantasy-point features.</li>
+                  <li>Uses exponential recency weighting, career-prior shrinkage, and small-sample variance guards instead of a black-box classifier.</li>
+                  <li>Exports diagnostic logs and CSV windows so every recommendation can be traced back to its inputs and probability calculation.</li>
+                </ul>
+                <p class="technology">Python · Pandas · NumPy · nba_api · probability modelling · CSV diagnostics</p>
                 <div class="project-links"><a href="https://github.com/mkodithuwakku/LockInModel" target="_blank" rel="noreferrer">Source ↗</a></div>
               </div>
             </article>
 
             <article class="project-card" aria-label="Project 5 of 5: Lanka Lingo">
-              <div class="project-media">
-                <img src="https://opengraph.githubassets.com/portfolio/mkodithuwakku/Lanka-Lingo" alt="GitHub preview for Lanka Lingo project" />
+              <div class="project-media lanka-media">
+                <img src="./assets/lanka-lingo.png" alt="Lanka Lingo mobile interface showing a guided Sinhala conversation" />
               </div>
               <div class="project-card-content">
-                <p class="project-type">Mobile web application</p>
+                <p class="project-type">Conversational learning MVP · Provider-based architecture</p>
                 <h3>Lanka Lingo</h3>
-                <p>A mobile-first Sinhala learning experience focused on speaking, listening, romanized prompts, and privacy-conscious voice handling.</p>
-                <p class="technology">TypeScript · React · voice interaction</p>
+                <p>A mobile-first Sinhala learning product built around guided conversation, speech, repair feedback, and romanized language support.</p>
+                <ul class="project-details">
+                  <li>A conversation engine separates domain state from speech, AI, pronunciation, progress, and content-review providers.</li>
+                  <li>Privacy rules keep raw learner audio off by default and require explicit opt-in before storage.</li>
+                  <li>Acceptance tests map onboarding, conversation, scenario, privacy, and content-review behaviour back to the product specification.</li>
+                </ul>
+                <p class="technology">Next.js · TypeScript · React · speech provider boundary · OpenAI SDK</p>
+                <p class="project-proof">15 acceptance tests · production build verified</p>
                 <div class="project-links"><a href="https://github.com/mkodithuwakku/Lanka-Lingo" target="_blank" rel="noreferrer">Source ↗</a></div>
               </div>
             </article>
@@ -178,18 +209,53 @@
           <h2 id="skills-title">Skills</h2>
         </div>
         <dl class="skills-list">
-          <div><dt>Languages</dt><dd>TypeScript, JavaScript, Swift, Python, C, C++, Java, SQL</dd></div>
-          <div><dt>Application development</dt><dd>Next.js, React, SwiftUI, PostgreSQL, Prisma, Firebase</dd></div>
-          <div><dt>Integration and tools</dt><dd>Git, Node-RED, Amazon S3, SOAP, XML, Power Platform</dd></div>
+          <div><dt>Languages</dt><dd>Python, TypeScript, JavaScript, Swift, Java, C, C++, SQL, Rust, Go, MATLAB, PowerShell, HTML/CSS</dd></div>
+          <div><dt>Backend and data</dt><dd>Node.js, Next.js APIs, PostgreSQL, Neon, Prisma, MongoDB, Firebase, Oracle, Auth.js, REST, SOAP, XML, Pandas, NumPy</dd></div>
+          <div><dt>Frontend and mobile</dt><dd>React, Next.js, SwiftUI, Apple Vision, Core Location, MapKit, Android, responsive and accessible UI development</dd></div>
+          <div><dt>Cloud and delivery</dt><dd>Amazon S3, Vercel, Git, GitHub, database migrations, environment configuration, linting, type-checking, build and post-deployment verification</dd></div>
+          <div><dt>Enterprise platforms</dt><dd>Node-RED, IBM MAS 9 / Maximo, Power Apps, Power Automate, SharePoint, Excel VBA, Power BI</dd></div>
+          <div><dt>Engineering practice</dt><dd>Authentication and role-based access, concurrency controls, regression and acceptance testing, UAT, backup and recovery, technical documentation, stakeholder communication</dd></div>
         </dl>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section-heading section-heading-single"><h2 id="education-title">Education, recognition, and community</h2></div>
+        <div class="resume-groups">
+          <article>
+            <h3>University of Alberta</h3>
+            <p>Bachelor of Science in Computer Engineering Software, Co-op Program</p>
+            <ul>
+              <li>Expected graduation: December 2026</li>
+              <li>Seven of eight academic terms completed</li>
+              <li>Four of four co-op work terms completed</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Awards</h3>
+            <ul>
+              <li>Jason Lang Scholarship, 2022</li>
+              <li>Alexander Rutherford Scholarship, 2021</li>
+              <li>Honours with Distinction, Strathcona High School</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Community</h3>
+            <ul>
+              <li>Volunteer, Sri Lankan Buddhist Temple Edmonton, 2016–present</li>
+              <li>Student Team for Alberta Rocketry Research, 2022</li>
+              <li>Robotics Club, Strathcona High School, 2018–2019</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div>
           <h2 id="contact-title">Contact</h2>
-          <p>I’m looking for junior software engineering opportunities starting after graduation in December 2026.</p>
+          <p>I’m looking for new-grad and junior software engineering roles starting January 2027.</p>
         </div>
         <div class="contact-links">
+          <a href="tel:+15875329229">587-532-9229</a>
           <a href="mailto:kodithuw@ualberta.ca">kodithuw@ualberta.ca</a>
           <a href="https://www.linkedin.com/in/malshaan/" target="_blank" rel="noreferrer">linkedin.com/in/malshaan ↗</a>
           <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">github.com/mkodithuwakku ↗</a>
