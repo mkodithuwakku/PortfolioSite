@@ -11,56 +11,122 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#work">Skip to selected work</a>
+    <a class="skip-link" href="#background">Skip to introduction</a>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Malshaan Kodithuwakku, home"><span>MK</span><i>/</i><small>27</small></a>
-      <p>Software engineering<br />Edmonton, Alberta</p>
+      <p>Software engineer<br />Edmonton, Alberta</p>
       <nav aria-label="Primary navigation">
-        <a href="#work"><span>01</span> Work</a>
-        <a href="#about"><span>02</span> Notes</a>
-        <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer"><span>03</span> Code ↗</a>
+        <a href="#background"><span>01</span> Background</a>
+        <a href="#experience"><span>02</span> Experience</a>
+        <a href="#work"><span>03</span> Projects</a>
+        <a href="#contact"><span>04</span> Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-field">
-          <p class="field-label">Field note 00 <span>53.5461° N / 113.4938° W</span></p>
-          <h1 id="hero-title"><span>Malshaan</span><span>Kodithuwakku</span></h1>
-          <div class="hero-brief">
-            <p>Software engineer building dependable systems across the web, native iOS, and data.</p>
-            <p>Fifth-year student · 16 months inside Alberta’s energy industry · graduating 2027.</p>
+      <section class="intro-hero" id="background" aria-labelledby="hero-title">
+        <div class="intro-main">
+          <p class="field-label"><span>Background / 01</span><span>Edmonton, Alberta</span></p>
+          <div class="intro-copy">
+            <p class="intro-name">Malshaan Kodithuwakku</p>
+            <h1 id="hero-title">I build software that makes <em>complex work feel clear.</em></h1>
+            <p class="intro-lede">I’m a fifth-year Computer Engineering Software student at the University of Alberta with 16 months of experience building operational software inside Alberta’s energy industry.</p>
+            <div class="intro-actions">
+              <a href="#experience">Start with my experience <span aria-hidden="true">↓</span></a>
+              <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <div class="availability-note"><span aria-hidden="true"></span> Open to 2027 new-grad roles</div>
         </div>
 
-        <aside class="project-register" aria-label="Selected project index">
-          <div class="register-head"><span>Selected work</span><span>Index / 05</span></div>
-          <ol>
-            <li><a href="#the-schedule"><span>01</span><strong>theSchedule</strong><small>Full-stack operations</small></a></li>
-            <li><a href="#my-closet"><span>02</span><strong>myCloset</strong><small>Native iOS · Vision</small></a></li>
-            <li><a href="#casino-compass"><span>03</span><strong>CasinoCompass</strong><small>Location · Mobile</small></a></li>
-            <li><a href="#lock-in-model"><span>04</span><strong>LockInModel</strong><small>Sports · Statistics</small></a></li>
-            <li><a href="#lanka-lingo"><span>05</span><strong>Lanka Lingo</strong><small>Language · Voice</small></a></li>
-          </ol>
-          <a class="register-link" href="#work">Open the case files <span aria-hidden="true">↓</span></a>
+        <aside class="candidate-dossier" aria-label="Candidate summary">
+          <div class="dossier-head"><span>Candidate brief</span><span>MK / 2026</span></div>
+          <dl>
+            <div><dt>Education</dt><dd>Computer Engineering Software<br /><small>University of Alberta</small></dd></div>
+            <div><dt>Experience</dt><dd>16 months<br /><small>Apex Utilities + ATCO Gas</small></dd></div>
+            <div><dt>Focus</dt><dd>Full-stack · Mobile · Data</dd></div>
+            <div><dt>Graduating</dt><dd>December 2026</dd></div>
+          </dl>
+          <div class="dossier-pitch">
+            <span>My pitch</span>
+            <p>I turn real operational constraints into dependable software—and I can explain the decisions behind what I build.</p>
+          </div>
         </aside>
       </section>
 
-      <section class="proof-strip" aria-label="Candidate highlights">
-        <p>Profile ledger</p>
-        <article><span>Industry</span><strong>16 months</strong><small>Alberta energy</small></article>
-        <article><span>Practice</span><strong>Web / iOS / Data</strong><small>Across the stack</small></article>
-        <article><span>Current</span><strong>5th year</strong><small>Software engineering</small></article>
-        <article><span>Next</span><strong>2027</strong><small>New-grad roles</small></article>
+      <section class="interview-route" aria-label="Portfolio reading order">
+        <p>Read this like an interview</p>
+        <ol>
+          <li><span>01</span><strong>Background</strong><small>Who I am</small></li>
+          <li><span>02</span><strong>Experience</strong><small>Where I’ve worked</small></li>
+          <li><span>03</span><strong>Projects</strong><small>How I build</small></li>
+          <li><span>04</span><strong>Contact</strong><small>What comes next</small></li>
+        </ol>
+      </section>
+
+      <section class="experience-section" id="experience" aria-labelledby="experience-title">
+        <header class="chapter-intro reveal">
+          <p class="section-code">Experience / 02</p>
+          <div>
+            <span class="chapter-summary">Two co-op terms · 16 months · Alberta utilities</span>
+            <h2 id="experience-title">I learned to build around <em>real operations.</em></h2>
+            <p>My co-op work put me between business requirements, operational data, and the systems people depend on. I learned to ask better questions, test the failure paths, and leave software maintainable for the next person.</p>
+          </div>
+        </header>
+
+        <div class="experience-list">
+          <article class="experience-record reveal">
+            <header><span>01 / Most recent</span><time datetime="2025-05">May—Dec 2025</time></header>
+            <div class="experience-company">
+              <p>Apex Utilities Inc.</p>
+              <small>Leduc, Alberta</small>
+            </div>
+            <div class="experience-detail">
+              <h3>Operations Applications Co-op</h3>
+              <p>Redesigned an Alberta One-Call integration as the organization migrated from IBM Maximo to MAS 9, transforming XML locate tickets into work orders used to dispatch field crews.</p>
+              <ul>
+                <li>Updated Node-RED field mappings and SOAP requests for the new enterprise environment.</li>
+                <li>Integrated Amazon S3 image uploads, attachment links, and API-key authentication over HTTPS.</li>
+                <li>Tested five ticket types plus malformed XML, bad dates, and simulated upload failures before rollout.</li>
+              </ul>
+              <p class="experience-stack">Node-RED · JavaScript · XML · SOAP · Amazon S3 · IBM MAS 9</p>
+            </div>
+          </article>
+
+          <article class="experience-record reveal">
+            <header><span>02 / Foundation</span><time datetime="2024-01">Jan—Aug 2024</time></header>
+            <div class="experience-company">
+              <p>ATCO Gas</p>
+              <small>Project Services</small>
+            </div>
+            <div class="experience-detail">
+              <h3>Computer Engineering Co-op</h3>
+              <p>Built and supported business applications and data workflows for project and quality-assurance teams.</p>
+              <ul>
+                <li>Led a Quality Assurance Service Request app from requirements and prototyping through deployment.</li>
+                <li>Developed workflows across Oracle, Excel VBA, and Microsoft Power Platform.</li>
+                <li>Presented to stakeholders, documented support procedures, and mentored colleagues for handover.</li>
+              </ul>
+              <p class="experience-stack">Power Apps · Power Automate · Oracle · Excel VBA · SharePoint</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="experience-lessons reveal" aria-label="What the experience developed">
+          <p>What those roles developed</p>
+          <ol>
+            <li><span>01</span><strong>Translate</strong><small>Turn stakeholder needs into concrete system behaviour.</small></li>
+            <li><span>02</span><strong>Validate</strong><small>Test unhappy paths before software reaches operations.</small></li>
+            <li><span>03</span><strong>Hand off</strong><small>Document decisions so another person can own the system.</small></li>
+          </ol>
+        </div>
       </section>
 
       <section class="work-section" id="work" aria-labelledby="work-title">
         <header class="work-intro reveal">
-          <p class="section-code">Project folio / 01—05</p>
-          <h2 id="work-title">Five surfaces.<br /><em>One way of working.</em></h2>
-          <p>Find the real constraint, make the behaviour legible, and build enough evidence to trust the result.</p>
+          <p class="section-code">Selected projects / 03</p>
+          <h2 id="work-title">Here is the <em>evidence.</em></h2>
+          <p>Five favourite projects that show how I approach full-stack systems, native iOS, data analysis, and product thinking.</p>
         </header>
 
         <article class="case-file flagship reveal" id="the-schedule">
@@ -182,35 +248,25 @@
         </article>
       </section>
 
-      <section class="about-section" id="about" aria-labelledby="about-title">
-        <aside><span>Working notes</span><strong>06</strong><small>Engineer / Person / Candidate</small></aside>
-        <div class="about-body">
-          <p class="section-code">About / The person behind the work</p>
-          <h2 id="about-title">Curious across the stack.<br /><em>Serious about ownership.</em></h2>
-          <div class="about-copy">
-            <p class="about-lede">I’m a fifth-year software engineering student in Edmonton with 16 months of experience in Alberta’s energy sector. I’m drawn to software with a visible reason to exist.</p>
-            <p>That might be a store that needs a better workflow, a mobile interaction that must feel natural, or a sports decision that should be explainable. Agentic tools help me move quickly; understanding the architecture, testing the boundaries, and owning the explanation are still my responsibility.</p>
-          </div>
-          <ol class="working-method">
-            <li><span>01</span><strong>Find the real constraint.</strong><p>People, privacy, devices, data quality, and operating habits shape the system.</p></li>
-            <li><span>02</span><strong>Make failure visible.</strong><p>Recovery paths and honest boundaries belong in the product, not just the postmortem.</p></li>
-            <li><span>03</span><strong>Own the explanation.</strong><p>I should be able to trace the behaviour, defend the tradeoff, and improve the result.</p></li>
-          </ol>
+      <section class="contact-section reveal" id="contact" aria-labelledby="contact-title">
+        <p class="section-code">Contact / 04</p>
+        <div class="contact-copy">
+          <span>Graduating December 2026 · Edmonton, Alberta</span>
+          <h2 id="contact-title">Let’s talk about the work your team needs done.</h2>
+          <p>I’m looking for junior software engineering roles across product, full-stack, mobile, or data-oriented teams. If the work is useful and the team cares about doing it well, I want to hear about it.</p>
         </div>
-      </section>
-
-      <section class="contact-section reveal" aria-labelledby="contact-title">
-        <p class="section-code">Next / 2027</p>
-        <h2 id="contact-title">Available for junior software engineering roles.</h2>
-        <p>Product, full-stack, mobile, or data-oriented teams—especially where useful software and thoughtful execution matter.</p>
-        <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer">Continue on GitHub <span>↗</span></a>
+        <div class="contact-links">
+          <a href="mailto:kodithuw@ualberta.ca"><span>Email</span><strong>kodithuw@ualberta.ca</strong><i>↗</i></a>
+          <a href="https://www.linkedin.com/in/malshaan/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Connect with me</strong><i>↗</i></a>
+          <a href="https://github.com/mkodithuwakku" target="_blank" rel="noreferrer"><span>GitHub</span><strong>Review the code</strong><i>↗</i></a>
+        </div>
       </section>
     </main>
 
     <footer>
       <div><strong>Malshaan Kodithuwakku</strong><span>Software Engineering · Edmonton, Alberta</span></div>
       <a href="#top">Back to top ↑</a>
-      <span>Field notes, case files, and work that can be explained.</span>
+      <span>Background → Experience → Projects → Contact</span>
     </footer>
   </body>
 </html>

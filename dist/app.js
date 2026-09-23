@@ -18,28 +18,28 @@ if ('IntersectionObserver' in window) {
   revealElements.forEach((element) => element.classList.add('is-visible'));
 }
 
-const projectLinks = new Map(
-  [...document.querySelectorAll('.project-register a[href^="#"]')].map((link) => [
+const sectionLinks = new Map(
+  [...document.querySelectorAll('.site-header nav a[href^="#"]')].map((link) => [
     link.getAttribute('href').slice(1),
     link,
   ])
 );
 
-if ('IntersectionObserver' in window && projectLinks.size) {
-  const projectObserver = new IntersectionObserver(
+if ('IntersectionObserver' in window && sectionLinks.size) {
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
-        projectLinks.forEach((link) => link.removeAttribute('aria-current'));
-        projectLinks.get(entry.target.id)?.setAttribute('aria-current', 'true');
+        sectionLinks.forEach((link) => link.removeAttribute('aria-current'));
+        sectionLinks.get(entry.target.id)?.setAttribute('aria-current', 'true');
       });
     },
     { rootMargin: '-28% 0px -58% 0px' }
   );
 
-  projectLinks.forEach((_, id) => {
+  sectionLinks.forEach((_, id) => {
     const section = document.getElementById(id);
-    if (section) projectObserver.observe(section);
+    if (section) sectionObserver.observe(section);
   });
 }
