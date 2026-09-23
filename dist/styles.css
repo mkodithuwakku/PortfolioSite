@@ -35,8 +35,7 @@ main { width: min(calc(100% - 2.5rem), var(--max-width)); margin: 0 auto; }
 .eyebrow { margin: 0 0 1rem; color: var(--muted); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .intro h1 { margin: 0; font-size: clamp(3rem, 8vw, 5.75rem); line-height: 1; letter-spacing: -.055em; }
 .intro-copy { max-width: 790px; margin: 2rem 0 0; font-size: clamp(1.25rem, 2.5vw, 1.65rem); line-height: 1.5; }
-.intro-focus { max-width: 720px; margin: 1rem 0 0; color: var(--muted); }
-.intro-details { max-width: 920px; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; border-top: 1px solid var(--line); }
+.intro-details { max-width: 760px; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); list-style: none; border-top: 1px solid var(--line); }
 .intro-details li { padding: 1rem 1rem 0 0; display: flex; flex-direction: column; gap: .25rem; }
 .intro-details strong { font-size: .92rem; }
 .intro-details span { color: var(--muted); font-size: .82rem; line-height: 1.45; }
